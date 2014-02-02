@@ -1,1 +1,17 @@
-Hello, <%= @user.name%>
+<% if current_user %>
+<h1>post something!</h1>
+<%=form_for @post do |f| %>
+    <%= f.text_area :content %>
+    <%= f.submit"post :)"%>
+    <% end %>
+  
+    <%end%>
+ 
+    <br>
+
+    <h1><%= @user.name %>'s posts </h1>
+    <% @user.posts.each do |post| %>
+    <p> <%= post.content %></p>
+    <%= time_ago_in_words(post.created_at) %>
+    <% end %>
+

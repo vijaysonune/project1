@@ -1,8 +1,10 @@
 <%= form_for @user do |f| %>
+<h1>name</h1>
        <%= f.text_field :name %>
        <br>
-       <%= f.text_field :email%><br>
-       <%= f.password_field :password %><br>
-       <%= f.password_field :password_confirmation %><br>
+
+<h1>email</h1>       <%= f.text_field :email%><br>
+     <h1>password</h1>  <%= f.password_field :password %><br>
+      <h1>password confirmation</h1><%= f.password_field :password_confirmation %><br>
        <%=f.submit"Create Account"%><br>
        <% end %>
