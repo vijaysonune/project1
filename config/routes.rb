@@ -1,4 +1,5 @@
 Project1::Application.routes.draw do
+<<<<<<< HEAD
   get "sessions/new"
   post "sessions/create"
   get "sessions/destroy"
@@ -7,6 +8,13 @@ Project1::Application.routes.draw do
 
 
  # The priority is based upon order of creation: first created -> highest priority.
+=======
+  resources :users
+
+  get "say/hello"
+  get "say/goodbye"
+  # The priority is based upon order of creation: first created -> highest priority.
+>>>>>>> 00d60f0bde628859afb04fcdec103c2ad3b5ed1f
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
