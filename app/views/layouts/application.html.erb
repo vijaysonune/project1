@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project1</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if current_user %>
+  <%=link_to "logged out", sessions_destroy_path %>
+  <% else %>
+  <%= link_to "loged in",sessions_new_path %>
+    
+    <% end %>
+
+
+
+
+
+<%= yield %>
+
+</body>
+</html>
